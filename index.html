@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Finder</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="bg-orange-50">
+    <header class="bg-lime-700 text-white p-4">
+        <div class="wrapper flex flex-col items-center gap-4 lg:flex-row lg:justify-between lg:gap-16 lg:px-20">
+                <div id="logo" class="lg:flex items-center">
+                    <section>
+                        <!-- <img class="fill-current text-blue-600 w-30 mx-auto" src="./assets/images/noun-spoon-and-fork-1560940.svg"> -->
+                        <svg class="fill-white w-10 lg:w-14 mx-auto" id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1056 1152">
+                        <!-- Generator: Adobe Illustrator 30.5.1, SVG Export Plug-In . SVG Version: 2.1.4 Build 3)  -->
+                        <path d="M816,384c12.7,0,24.9-5.1,33.9-14.1,9-9,14.1-21.2,14.1-33.9V48c0-17.1-9.1-33-24-41.6-14.9-8.6-33.1-8.6-48,0s-24,24.4-24,41.6v288c0,12.7,5.1,24.9,14.1,33.9,9,9,21.2,14.1,33.9,14.1Z"/>
+                        <path d="M96,575v433c0,51.4,27.4,99,72,124.7,44.6,25.7,99.4,25.7,144,0s72-73.3,72-124.7v-433c29.7-22.3,53.8-51.1,70.4-84.2,16.7-33.1,25.4-69.7,25.6-106.8v-144c0-63.7-25.3-124.7-70.3-169.7C364.7,25.3,303.7,0,240,0S115.3,25.3,70.3,70.3C25.3,115.3,0,176.3,0,240v144c.1,37.1,8.9,73.7,25.6,106.8,16.7,33.1,40.8,62,70.4,84.2h0ZM96,240c0-51.4,27.4-99,72-124.7,44.6-25.7,99.4-25.7,144,0,44.6,25.7,72,73.3,72,124.7v144c0,25.2-6.7,49.9-19.3,71.6-12.6,21.8-30.8,39.8-52.7,52.2-14.8,8.6-24,24.4-24,41.5v458.6c0,17.1-9.1,33-24,41.6-14.9,8.6-33.1,8.6-48,0s-24-24.4-24-41.6v-458.6c0-17.1-9.2-33-24-41.5-21.9-12.4-40.1-30.5-52.7-52.2-12.6-21.8-19.3-46.5-19.3-71.6v-144Z"/>
+                        <path d="M672,567.7v440.3c0,51.4,27.4,99,72,124.7,44.6,25.7,99.4,25.7,144,0s72-73.3,72-124.7v-440.3c28.1-9.9,52.4-28.3,69.6-52.6,17.2-24.3,26.4-53.3,26.4-83.1V48c0-17.1-9.1-33-24-41.6-14.9-8.6-33.1-8.6-48,0s-24,24.4-24,41.6v384c0,12.7-5.1,24.9-14.1,33.9-9,9-21.2,14.1-33.9,14.1s-24.9,5.1-33.9,14.1c-9,9-14.1,21.2-14.1,33.9v480c0,17.1-9.1,33-24,41.6-14.9,8.6-33.1,8.6-48,0s-24-24.4-24-41.6v-480c0-12.7-5.1-24.9-14.1-33.9-9-9-21.2-14.1-33.9-14.1s-24.9-5.1-33.9-14.1c-9-9-14.1-21.2-14.1-33.9V48c0-17.1-9.1-33-24-41.6-14.9-8.6-33.1-8.6-48,0s-24,24.4-24,41.6v384c0,29.8,9.2,58.8,26.4,83.1,17.2,24.3,41.5,42.7,69.6,52.6Z"/>
+                        </svg>
+                    </section>
+                    <h1 class="text-3xl lg:text-4xl font-semibold py-3 lg:pl-6">Meal Finder</h1>
+                </div>
+            <div id="form-container" class="flex justify-center w-72 md:w-96">
+                <form class="flex flex-grow"  id="submit">
+                    <input class="bg-gray-100 p-2 text-slate-800 rounded-l-lg flex-grow placeholder:italic placeholder:pl-2 focus:bg-slate-100" type="text" id="search" placeholder="Search for meals"/>
+                    <button class="search-btn bg-mist-400" type="submit">
+                    <i class="fa fa-search"></i>
+                    </button>
+                    <button class="random-btn bg-mist-400" id="random">
+                        <i class="fa fa-random"></i>
+                    </button>
+                </form>
+
+            </div>
+        </div><!--End of wrapper-->
+    </header>
+    <main >
+<div id="hero" class="bg-white bg-[url(./assets/images/food-1.jpg)] bg-cover">
+
+
+  <div class="relative px-6 pt-14 lg:px-8">
+
+    <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+
+      <div class="text-center bg-white/90 p-20 rounded-xl">
+        <h1 class="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl">Eat right fast</h1>
+        <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">Cooking recipes in 10 minutes</p>
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+          <a href="#" class="rounded-md bg-lime-700 px-7.5 py-3.5 text-sm font-semibold text-white shadow-xs hover:bg-lime-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
+          <a href="#" class="text-sm/6 font-semibold text-gray-900 border-1 rounded-md px-3.5 py-2.5">Learn more <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+    <div aria-hidden="true" class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+      <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75"></div>
+    </div>
+  </div>
+</div>
+
+    <div class="container px-4 md:px-8">
+        <div id="meal-of-day" class="meal-container bg-white mt-6 p-8 rounded-lg lg:flex lg:justify-between lg:items-center lg:mx-auto">
+            <div class="lg:mr-10">
+                <h1 class="mb-4 text-2xl font-semibold">Meal of the Day</h1>
+                <p class="font-semibold">Time</p>
+                <section class="w-30 underline decoration-black underline-offset-8 text-black p-2 font-normal rounded-md mx-auto mb-6 mt-2">10 minutes</section>
+                <h2 class="text-5xl text-red-900 font-bold">Ropa Vieja</h2>
+                <div class="mt-10 flex items-center justify-center gap-x-6">
+                <a href="#" class="rounded-md bg-lime-700 px-7.5 py-3.5 text-sm font-semibold text-white shadow-xs hover:bg-lime-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Start cooking</a>
+                </div>
+            </div>
+            <img class="rounded-lg w-125 mt-8 mx-auto" src="./assets/images/ropa-vieja.webp">
+        </div>
+
+
+
+
+
+        <div id="result-heading"></div>
+        <div id="meals" class="meals"></div>
+        <div id="drinks" class="drinks"></div>
+        <div class=" " id="single-meal">
+
+            </div>
+    </div>
+    </main>
+    <footer class="bg-lime-700 py-8 flex flex-col gap-6 lg:flex-row justify-between items-center px-8">
+
+        <h4 class="text-white text-center">©2026 All rights reserved.</h4>
+        <h4 class="text-white text-2xl">Meal Finder Inc.</h4>
+        <div id="socials" class="flex items-center gap-1">
+            <a href="#">
+                <i class="fa-brands fa-instagram text-2xl lg:text-4xl text-white"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-tiktok text-2xl lg:text-4xl text-white"></i>
+            </a>
+
+        </div>
+        <h2 class="text-base text-white font-normal">Get the latest recipes straight to your stomach</h2>
+    <form class="flex "  id="submit">
+        <input class="newsletter bg-gray-100 p-2 text-slate-800 rounded-l-lg flex-grow  placeholder:pl-2 focus:bg-slate-100" type="text" id="newsletter" placeholder="Enter your email"/>
+
+        <button id="subscribe-btn" class="subscribe-btn bg-mist-400" type="submit">
+            Subscribe
+        </button>
+
+    </form>
+
+    </footer>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
